@@ -8,16 +8,21 @@
   "main": "index.js",
   "scripts": {
     "prod": "NODE_ENV=production node src/index.js",
-    "dev": "NODE_ENV=development nodemon src/index.js"
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "doc": "node doc/swagger.js"
   },
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
     "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.19.1"
+    "mongoose": "^8.19.1",
+    "path": "^0.12.7",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
