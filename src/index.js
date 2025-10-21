@@ -10,6 +10,8 @@ import cors from "cors";
 import fs from "fs";
 import cookieParser from "cookie-parser";
 import swaggerUi from "swagger-ui-express";
+import ProjectRouter from "./routes/project.route.js";
+import TaskRouter from "./routes/task.route.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -35,6 +37,8 @@ const swaggerDocument = JSON.parse(fs.readFileSync(swaggerPath, 'utf8'));
 
 // Routes
 app.use('/api/v1/auth', AuthRouter);
+app.use('/api/v1/project', ProjectRouter);
+app.use('/api/v1/task', TaskRouter);
 
 // Serve Swagger UI at home route
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

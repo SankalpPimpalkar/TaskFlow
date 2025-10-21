@@ -9,7 +9,7 @@
   "scripts": {
     "prod": "NODE_ENV=production node src/index.js",
     "dev": "NODE_ENV=development nodemon src/index.js",
-    "doc": "node doc/swagger.js"
+    "doc": "node src/doc/swagger.js"
   },
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
