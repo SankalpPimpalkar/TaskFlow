@@ -1,5 +1,5 @@
 import swaggerAutogen from "swagger-autogen";
-import { PORT } from "../src/constants/index.js";
+import { PORT } from "../constants/index.js";
 
 const doc = {
     info: {
@@ -23,7 +23,7 @@ const doc = {
 const outputFile = './openapi.json';
 
 const endpointsFiles = [
-    '../src/index.js',
+    '../index.js',
 ];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
