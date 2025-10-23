@@ -6,17 +6,12 @@ const doc = {
         title: 'My Backend API',
         description: 'API documentation for my backend project',
     },
-    servers: [
-        {
-            url: process.env.NODE_ENV === 'production'
-                ? 'https://taskflow-0qa3.onrender.com'
-                : `http://localhost:${PORT}`,
-            description: process.env.NODE_ENV === 'production'
-                ? 'Production server'
-                : 'Local dev server'
-        }
-    ],
-    schemes: ['http', 'https'],
+    host: process.env.NODE_ENV === 'production'
+        ? 'taskflow-0qa3.onrender.com'  // e.g., "taskflow-0qa3.onrender.com"
+        : `localhost:${PORT}`,
+    schemes: process.env.NODE_ENV === 'production'
+        ? ['https']
+        : ['http', 'https'],
     // tags: [
     //     {
     //         name: 'Auth',
