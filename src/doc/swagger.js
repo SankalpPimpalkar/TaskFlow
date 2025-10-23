@@ -8,16 +8,16 @@ const doc = {
     },
     host: `localhost:${PORT}`,
     schemes: ['http', 'https'],
-    tags: [
-        {
-            name: 'Auth',
-            description: 'Endpoints related to user authentication (register, login, logout)',
-        },
-        {
-            name: 'Database',
-            description: 'Endpoints related to seeding and database operations',
-        },
-    ],
+    // tags: [
+    //     {
+    //         name: 'Auth',
+    //         description: 'Endpoints related to user authentication (register, login, logout)',
+    //     },
+    //     {
+    //         name: 'Database',
+    //         description: 'Endpoints related to seeding and database operations',
+    //     },
+    // ],
 };
 
 const outputFile = './openapi.json';

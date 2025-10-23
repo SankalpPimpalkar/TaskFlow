@@ -2,7 +2,6 @@ import Task from "../models/task.model.js";
 import AsyncHandler from "../utils/asynchandler.js";
 import Project from "../models/project.model.js";
 import User from "../models/user.model.js";
-import Project from "../models/project.model.js";
 
 export const createTask = AsyncHandler(async (req, res) => {
     const { title, description, projectId, dueDate, assignedTo, status } = req.body;
@@ -105,7 +104,7 @@ export const getUserTasks = AsyncHandler(async (req, res) => {
 
 export const getProjectTasks = AsyncHandler(async (req, res) => {
 
-    const { projectId } = req.body;
+    const { projectId } = req.params;
 
     if (!projectId.trim()) {
         return res

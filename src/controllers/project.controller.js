@@ -33,7 +33,8 @@ export const createProject = AsyncHandler(async (req, res) => {
 })
 
 export const addMembersInProject = AsyncHandler(async (req, res) => {
-    const { projectId, members } = req.body;
+    const { members } = req.body;
+    const { projectId } = req.params
 
     if (!members || !Array.isArray(members) || members.length === 0) {
         return res.status(400).json({
@@ -89,7 +90,7 @@ export const addMembersInProject = AsyncHandler(async (req, res) => {
 })
 
 export const getProject = AsyncHandler(async (req, res) => {
-    const { projectId } = req.body
+    const { projectId } = req.params
 
     if (!projectId || !projectId.trim()) {
         return res.status(400).json({
@@ -119,7 +120,7 @@ export const getProject = AsyncHandler(async (req, res) => {
 })
 
 export const deleteProject = AsyncHandler(async (req, res) => {
-    const { projectId } = req.body
+    const { projectId } = req.params
 
     if (!projectId || !projectId.trim()) {
         return res.status(400).json({
