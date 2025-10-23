@@ -6,7 +6,16 @@ const doc = {
         title: 'My Backend API',
         description: 'API documentation for my backend project',
     },
-    host: `localhost:${PORT}`,
+    servers: [
+        {
+            url: process.env.NODE_ENV === 'production'
+                ? 'https://taskflow-0qa3.onrender.com'
+                : `http://localhost:${PORT}`,
+            description: process.env.NODE_ENV === 'production'
+                ? 'Production server'
+                : 'Local dev server'
+        }
+    ],
     schemes: ['http', 'https'],
     // tags: [
     //     {

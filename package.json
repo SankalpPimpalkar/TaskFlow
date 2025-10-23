@@ -7,8 +7,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "prod": "NODE_ENV=production node src/index.js",
-    "dev": "NODE_ENV=development nodemon src/index.js",
+    "prod": "NODE_ENV=production node src/doc/swagger.js && node src/index.js",
+    "dev": "NODE_ENV=development node src/doc/swagger.js && nodemon src/index.js",
     "doc": "node src/doc/swagger.js"
   },
   "dependencies": {

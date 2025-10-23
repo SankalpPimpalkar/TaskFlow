@@ -5,7 +5,13 @@
     "description": "API documentation for my backend project",
     "version": "1.0.0"
   },
-  "host": "localhost:5050",
+  "host": "localhost:3000",
+  "servers": [
+    {
+      "url": "https://taskflow-0qa3.onrender.com",
+      "description": "Production server"
+    }
+  ],
   "basePath": "/",
   "schemes": [
     "http",
